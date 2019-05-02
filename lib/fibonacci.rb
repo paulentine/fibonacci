@@ -8,5 +8,7 @@
 # Time complexity: ?
 # Space complexity: ?
 def fibonacci(n)
-  raise NotImplementedError
+  raise ArgumentError if !n || n < 0
+  return n if n < 2
+  return (fibonacci(n - 1) + fibonacci(n - 2))
 end
